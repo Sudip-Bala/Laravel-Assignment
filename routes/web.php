@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
+use App\Http\Controllers\ProfileController;
+Route::get('/',function(){
     return view('welcome');
 });
+Route::get('/profile/{id}/',[ProfileController::class,'index']);
